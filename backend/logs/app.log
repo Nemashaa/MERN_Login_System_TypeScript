@@ -6635,3 +6635,214 @@
 [36m2025-04-02 13:11:14[39m [[32mINFO[39m]: OPTIONS /profile 204 0.197 ms
 [36m2025-04-02 13:11:14[39m [[31mERROR[39m]: GET /profile 401 0.573 ms
 [36m2025-04-02 13:18:37[39m [[32mINFO[39m]: Database Connected
+[36m2025-04-02 13:43:38[39m [[32mINFO[39m]: Database Connected
+[36m2025-04-02 13:58:49[39m [[32mINFO[39m]: Database Connected
+[36m2025-04-02 13:58:54[39m [[31mERROR[39m]: GET /profile 403 11.935 ms
+[36m2025-04-02 13:58:54[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.530 ms
+[36m2025-04-02 13:58:54[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.212 ms
+[36m2025-04-02 13:58:54[39m [[31mERROR[39m]: GET /profile 403 2.964 ms
+[36m2025-04-02 13:58:54[39m [[31mERROR[39m]: POST /refresh-token 403 47.806 ms
+[36m2025-04-02 13:58:54[39m [[31mERROR[39m]: POST /refresh-token 403 5.332 ms
+[36m2025-04-02 13:58:54[39m [[31mERROR[39m]: GET /profile 403 1.963 ms
+[36m2025-04-02 13:58:54[39m [[31mERROR[39m]: GET /profile 403 2.025 ms
+[36m2025-04-02 13:58:56[39m [[31mERROR[39m]: GET /profile 403 2.028 ms
+[36m2025-04-02 13:58:56[39m [[31mERROR[39m]: GET /profile 403 1.695 ms
+[36m2025-04-02 13:59:07[39m [[32mINFO[39m]: OPTIONS /login 204 0.215 ms
+[36m2025-04-02 13:59:08[39m [[33mWARN[39m]: Login failed: Incorrect password for email mali@gmail.com
+[36m2025-04-02 13:59:08[39m [[31mERROR[39m]: POST /login 400 634.921 ms
+[36m2025-04-02 13:59:11[39m [[33mWARN[39m]: Login failed: Incorrect password for email mali@gmail.com
+[36m2025-04-02 13:59:11[39m [[31mERROR[39m]: POST /login 400 622.278 ms
+[36m2025-04-02 13:59:13[39m [[32mINFO[39m]: OPTIONS /login 204 0.246 ms
+[36m2025-04-02 13:59:14[39m [[33mWARN[39m]: Login failed: Incorrect password for email mali@gmail.com
+[36m2025-04-02 13:59:14[39m [[31mERROR[39m]: POST /login 400 1019.174 ms
+[36m2025-04-02 13:59:19[39m [[31mERROR[39m]: GET /profile 403 18.240 ms
+[36m2025-04-02 13:59:19[39m [[31mERROR[39m]: GET /profile 403 2.097 ms
+[36m2025-04-02 14:01:21[39m [[32mINFO[39m]: Database Connected
+[36m2025-04-02 14:03:50[39m [[31mERROR[39m]: GET /profile 403 12.042 ms
+[36m2025-04-02 14:03:50[39m [[31mERROR[39m]: GET /profile 403 2.315 ms
+[36m2025-04-02 14:04:16[39m [[32mINFO[39m]: OPTIONS /login 204 7.179 ms
+[36m2025-04-02 14:04:17[39m [[33mWARN[39m]: Login failed: Incorrect password for email mali@gmail.com
+[36m2025-04-02 14:04:17[39m [[31mERROR[39m]: POST /login 400 793.624 ms
+[36m2025-04-02 14:06:52[39m [[31mERROR[39m]: GET /profile 403 7.017 ms
+[36m2025-04-02 14:06:52[39m [[31mERROR[39m]: GET /profile 403 2.087 ms
+[36m2025-04-02 14:07:24[39m [[32mINFO[39m]: OPTIONS /register 204 0.467 ms
+[36m2025-04-02 14:07:25[39m [[32mINFO[39m]: New user registered: hansi@gmail.com
+[36m2025-04-02 14:07:25[39m [[32mINFO[39m]: POST /register 201 1431.215 ms
+[36m2025-04-02 14:07:25[39m [[31mERROR[39m]: GET /profile 403 2.486 ms
+[36m2025-04-02 14:07:25[39m [[31mERROR[39m]: GET /profile 403 18.912 ms
+[36m2025-04-02 14:07:45[39m [[32mINFO[39m]: OPTIONS /login 204 0.301 ms
+[36m2025-04-02 14:07:46[39m [[32mINFO[39m]: User logged in: hansi@gmail.com
+[36m2025-04-02 14:07:46[39m [[32mINFO[39m]: POST /login 200 972.179 ms
+[36m2025-04-02 14:08:45[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf745557ceab42398d5ae
+[36m2025-04-02 14:08:45[39m [[32mINFO[39m]: GET /profile 200 5.736 ms
+[36m2025-04-02 14:08:45[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf745557ceab42398d5ae
+[36m2025-04-02 14:08:45[39m [[32mINFO[39m]: GET /profile 304 20.580 ms
+[36m2025-04-02 14:08:46[39m [[32mINFO[39m]: GET /api/posts 200 336.071 ms
+[36m2025-04-02 14:10:08[39m [[32mINFO[39m]: OPTIONS /api/create/post 204 0.236 ms
+[36m2025-04-02 14:10:08[39m [[31mERROR[39m]: POST /api/create/post 403 3.350 ms
+[36m2025-04-02 14:10:11[39m [[31mERROR[39m]: POST /api/create/post 403 2.362 ms
+[36m2025-04-02 14:10:14[39m [[32mINFO[39m]: OPTIONS /api/create/post 204 1.632 ms
+[36m2025-04-02 14:10:14[39m [[31mERROR[39m]: POST /api/create/post 403 5.486 ms
+[36m2025-04-02 14:10:46[39m [[31mERROR[39m]: GET /api/create/post 404 13.183 ms
+[36m2025-04-02 14:10:55[39m [[31mERROR[39m]: GET /api/posts 403 3.185 ms
+[36m2025-04-02 14:10:56[39m [[31mERROR[39m]: GET /api/posts 403 3.687 ms
+[36m2025-04-02 14:10:58[39m [[31mERROR[39m]: GET /api/posts 403 3.440 ms
+[36m2025-04-02 14:11:02[39m [[31mERROR[39m]: GET /api/posts 403 4.898 ms
+[36m2025-04-02 14:11:21[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:11:21[39m [[32mINFO[39m]: POST /logout 200 0.971 ms
+[36m2025-04-02 14:11:21[39m [[31mERROR[39m]: GET /profile 401 0.479 ms
+[36m2025-04-02 14:11:21[39m [[31mERROR[39m]: GET /profile 401 0.367 ms
+[36m2025-04-02 14:11:21[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.211 ms
+[36m2025-04-02 14:11:21[39m [[31mERROR[39m]: POST /refresh-token 403 0.991 ms
+[36m2025-04-02 14:11:21[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.229 ms
+[36m2025-04-02 14:11:21[39m [[32mINFO[39m]: OPTIONS /logout 204 0.371 ms
+[36m2025-04-02 14:11:21[39m [[31mERROR[39m]: POST /refresh-token 403 1.059 ms
+[36m2025-04-02 14:11:21[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:11:21[39m [[32mINFO[39m]: POST /logout 200 1.392 ms
+[36m2025-04-02 14:11:21[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:11:21[39m [[32mINFO[39m]: POST /logout 200 1.191 ms
+[36m2025-04-02 14:19:45[39m [[32mINFO[39m]: Database Connected
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 2.004 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: GET /profile 401 5.206 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: GET /profile 401 0.788 ms
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.219 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: POST /refresh-token 403 38.447 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: POST /refresh-token 403 1.303 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: POST /refresh-token 403 0.866 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: POST /refresh-token 403 1.054 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: GET /profile 401 1.078 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: GET /profile 401 0.358 ms
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: OPTIONS /logout 204 0.201 ms
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: POST /logout 200 6.147 ms
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: POST /logout 200 2.797 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: POST /refresh-token 403 1.143 ms
+[36m2025-04-02 14:19:55[39m [[31mERROR[39m]: POST /refresh-token 403 0.722 ms
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: POST /logout 200 1.771 ms
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:19:55[39m [[32mINFO[39m]: POST /logout 200 1.319 ms
+[36m2025-04-02 14:19:56[39m [[31mERROR[39m]: GET /profile 401 0.362 ms
+[36m2025-04-02 14:19:56[39m [[31mERROR[39m]: POST /refresh-token 403 0.992 ms
+[36m2025-04-02 14:19:56[39m [[31mERROR[39m]: GET /profile 401 0.422 ms
+[36m2025-04-02 14:19:56[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:19:56[39m [[32mINFO[39m]: POST /logout 200 1.223 ms
+[36m2025-04-02 14:19:56[39m [[31mERROR[39m]: POST /refresh-token 403 5.146 ms
+[36m2025-04-02 14:19:56[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:19:56[39m [[32mINFO[39m]: POST /logout 200 3.838 ms
+[36m2025-04-02 14:20:09[39m [[32mINFO[39m]: OPTIONS /login 204 0.408 ms
+[36m2025-04-02 14:20:10[39m [[32mINFO[39m]: User logged in: sithu@gmail.com
+[36m2025-04-02 14:20:10[39m [[32mINFO[39m]: POST /login 200 808.903 ms
+[36m2025-04-02 14:20:10[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:20:10[39m [[32mINFO[39m]: GET /profile 200 8.178 ms
+[36m2025-04-02 14:20:10[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:20:10[39m [[32mINFO[39m]: GET /profile 304 5.506 ms
+[36m2025-04-02 14:20:11[39m [[32mINFO[39m]: GET /api/posts 200 317.266 ms
+[36m2025-04-02 14:20:24[39m [[32mINFO[39m]: OPTIONS /api/create/post 204 0.181 ms
+[36m2025-04-02 14:20:25[39m [[32mINFO[39m]: POST /api/create/post 201 1231.774 ms
+[36m2025-04-02 14:20:25[39m [[32mINFO[39m]: GET /api/posts 200 305.838 ms
+[36m2025-04-02 14:20:44[39m [[32mINFO[39m]: OPTIONS /api/create/post 204 0.196 ms
+[36m2025-04-02 14:20:45[39m [[32mINFO[39m]: POST /api/create/post 201 989.543 ms
+[36m2025-04-02 14:20:46[39m [[32mINFO[39m]: GET /api/posts 200 295.063 ms
+[36m2025-04-02 14:20:50[39m [[32mINFO[39m]: OPTIONS /api/update/post/12 204 0.210 ms
+[36m2025-04-02 14:20:51[39m [[32mINFO[39m]: PUT /api/update/post/12 200 624.028 ms
+[36m2025-04-02 14:20:51[39m [[32mINFO[39m]: GET /api/posts 200 552.402 ms
+[36m2025-04-02 14:20:51[39m [[32mINFO[39m]: OPTIONS /api/delete/post/12 204 0.180 ms
+[36m2025-04-02 14:20:52[39m [[32mINFO[39m]: DELETE /api/delete/post/12 200 719.230 ms
+[36m2025-04-02 14:20:53[39m [[32mINFO[39m]: GET /api/posts 200 605.987 ms
+[36m2025-04-02 14:20:57[39m [[32mINFO[39m]: OPTIONS /api/update/post/11 204 0.189 ms
+[36m2025-04-02 14:20:57[39m [[32mINFO[39m]: PUT /api/update/post/11 200 280.862 ms
+[36m2025-04-02 14:20:57[39m [[32mINFO[39m]: GET /api/posts 200 283.307 ms
+[36m2025-04-02 14:20:58[39m [[32mINFO[39m]: OPTIONS /api/delete/post/11 204 0.449 ms
+[36m2025-04-02 14:20:58[39m [[32mINFO[39m]: DELETE /api/delete/post/11 200 314.038 ms
+[36m2025-04-02 14:20:59[39m [[32mINFO[39m]: GET /api/posts 200 596.334 ms
+[36m2025-04-02 14:21:06[39m [[32mINFO[39m]: OPTIONS /api/create/post 204 0.173 ms
+[36m2025-04-02 14:21:08[39m [[32mINFO[39m]: POST /api/create/post 201 1615.383 ms
+[36m2025-04-02 14:21:08[39m [[32mINFO[39m]: GET /api/posts 200 277.511 ms
+[36m2025-04-02 14:21:24[39m [[32mINFO[39m]: OPTIONS /api/update/post/13 204 0.314 ms
+[36m2025-04-02 14:21:25[39m [[32mINFO[39m]: PUT /api/update/post/13 200 352.828 ms
+[36m2025-04-02 14:21:25[39m [[32mINFO[39m]: GET /api/posts 200 645.935 ms
+[36m2025-04-02 14:21:35[39m [[32mINFO[39m]: OPTIONS /api/create/post 204 0.183 ms
+[36m2025-04-02 14:21:37[39m [[32mINFO[39m]: POST /api/create/post 201 1311.693 ms
+[36m2025-04-02 14:21:37[39m [[32mINFO[39m]: GET /api/posts 200 500.858 ms
+[36m2025-04-02 14:29:36[39m [[31mERROR[39m]: GET /api/posts 403 2.483 ms
+[36m2025-04-02 14:29:37[39m [[31mERROR[39m]: GET /api/posts 403 3.492 ms
+[36m2025-04-02 14:29:39[39m [[31mERROR[39m]: GET /api/posts 403 3.366 ms
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: POST /logout 200 8.135 ms
+[36m2025-04-02 14:29:40[39m [[31mERROR[39m]: GET /profile 401 0.365 ms
+[36m2025-04-02 14:29:40[39m [[31mERROR[39m]: GET /profile 401 1.581 ms
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.886 ms
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.307 ms
+[36m2025-04-02 14:29:40[39m [[31mERROR[39m]: POST /refresh-token 403 0.690 ms
+[36m2025-04-02 14:29:40[39m [[31mERROR[39m]: POST /refresh-token 403 1.602 ms
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: OPTIONS /logout 204 0.221 ms
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: OPTIONS /logout 204 0.173 ms
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: POST /logout 200 1.385 ms
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:29:40[39m [[32mINFO[39m]: POST /logout 200 1.722 ms
+[36m2025-04-02 14:29:41[39m [[32mINFO[39m]: OPTIONS /login 204 0.186 ms
+[36m2025-04-02 14:29:42[39m [[33mWARN[39m]: Login failed: No user found with email 
+[36m2025-04-02 14:29:42[39m [[31mERROR[39m]: POST /login 404 456.326 ms
+[36m2025-04-02 14:30:02[39m [[32mINFO[39m]: OPTIONS /login 204 0.234 ms
+[36m2025-04-02 14:30:07[39m [[33mWARN[39m]: Login failed: No user found with email 
+[36m2025-04-02 14:30:07[39m [[31mERROR[39m]: POST /login 404 4591.380 ms
+[36m2025-04-02 14:30:07[39m [[33mWARN[39m]: Login failed: No user found with email 
+[36m2025-04-02 14:30:07[39m [[31mERROR[39m]: POST /login 404 1970.882 ms
+[36m2025-04-02 14:30:07[39m [[33mWARN[39m]: Login failed: No user found with email 
+[36m2025-04-02 14:30:07[39m [[31mERROR[39m]: POST /login 404 3192.394 ms
+[36m2025-04-02 14:30:31[39m [[32mINFO[39m]: OPTIONS /login 204 0.446 ms
+[36m2025-04-02 14:30:32[39m [[33mWARN[39m]: Login failed: No user found with email 
+[36m2025-04-02 14:30:32[39m [[31mERROR[39m]: POST /login 404 665.103 ms
+[36m2025-04-02 14:30:38[39m [[31mERROR[39m]: GET /profile 401 0.360 ms
+[36m2025-04-02 14:30:38[39m [[31mERROR[39m]: GET /profile 401 1.170 ms
+[36m2025-04-02 14:30:38[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.202 ms
+[36m2025-04-02 14:30:38[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 1.528 ms
+[36m2025-04-02 14:30:38[39m [[31mERROR[39m]: POST /refresh-token 403 0.579 ms
+[36m2025-04-02 14:30:38[39m [[31mERROR[39m]: POST /refresh-token 403 0.541 ms
+[36m2025-04-02 14:30:38[39m [[32mINFO[39m]: OPTIONS /logout 204 0.447 ms
+[36m2025-04-02 14:30:38[39m [[32mINFO[39m]: OPTIONS /logout 204 0.249 ms
+[36m2025-04-02 14:30:38[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:30:38[39m [[32mINFO[39m]: POST /logout 200 1.254 ms
+[36m2025-04-02 14:30:38[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:30:38[39m [[32mINFO[39m]: POST /logout 200 0.784 ms
+[36m2025-04-02 14:30:39[39m [[32mINFO[39m]: OPTIONS /register 204 0.157 ms
+[36m2025-04-02 14:30:39[39m [[33mWARN[39m]: Registration failed: Name is required
+[36m2025-04-02 14:30:39[39m [[31mERROR[39m]: POST /register 400 2.415 ms
+[36m2025-04-02 14:31:28[39m [[31mERROR[39m]: GET /profile 401 0.346 ms
+[36m2025-04-02 14:31:28[39m [[31mERROR[39m]: GET /profile 401 0.573 ms
+[36m2025-04-02 14:31:28[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.558 ms
+[36m2025-04-02 14:31:28[39m [[31mERROR[39m]: POST /refresh-token 403 3.495 ms
+[36m2025-04-02 14:31:28[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.591 ms
+[36m2025-04-02 14:31:28[39m [[32mINFO[39m]: OPTIONS /logout 204 0.567 ms
+[36m2025-04-02 14:31:28[39m [[31mERROR[39m]: POST /refresh-token 403 0.832 ms
+[36m2025-04-02 14:31:28[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:31:28[39m [[32mINFO[39m]: POST /logout 200 0.819 ms
+[36m2025-04-02 14:31:28[39m [[32mINFO[39m]: User logged out: Unknown user
+[36m2025-04-02 14:31:28[39m [[32mINFO[39m]: POST /logout 200 0.910 ms
+[36m2025-04-02 14:32:11[39m [[32mINFO[39m]: OPTIONS /login 204 0.406 ms
+[36m2025-04-02 14:32:12[39m [[32mINFO[39m]: User logged in: sithu@gmail.com
+[36m2025-04-02 14:32:12[39m [[32mINFO[39m]: POST /login 200 608.807 ms
+[36m2025-04-02 14:32:12[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:32:12[39m [[32mINFO[39m]: GET /profile 200 4.705 ms
+[36m2025-04-02 14:32:12[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:32:12[39m [[32mINFO[39m]: GET /profile 304 17.153 ms
+[36m2025-04-02 14:32:12[39m [[32mINFO[39m]: GET /api/posts 200 318.819 ms
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: GET /profile 304 4.887 ms
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.164 ms
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: POST /refresh-token 200 6.407 ms
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: GET /profile 304 4.939 ms
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: POST /refresh-token 200 3.628 ms
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: GET /profile 304 4.974 ms
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:32:17[39m [[32mINFO[39m]: GET /profile 304 4.160 ms
+[36m2025-04-02 14:32:18[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:32:18[39m [[32mINFO[39m]: GET /profile 304 6.541 ms
+[36m2025-04-02 14:32:18[39m [[32mINFO[39m]: Profile accessed for user ID: 67ecf3b502e5c863f02e6038
+[36m2025-04-02 14:32:18[39m [[32mINFO[39m]: GET /profile 304 4.385 ms
+[36m2025-04-02 14:32:18[39m [[32mINFO[39m]: GET /api/posts 304 460.819 ms
