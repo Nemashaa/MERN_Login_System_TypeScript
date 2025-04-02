@@ -6613,3 +6613,25 @@
 [36m2025-04-02 11:24:49[39m [[32mINFO[39m]: Database Connected
 [36m2025-04-02 11:25:20[39m [[32mINFO[39m]: Database Connected
 [36m2025-04-02 11:43:44[39m [[32mINFO[39m]: Database Connected
+[36m2025-04-02 12:00:54[39m [[32mINFO[39m]: Database Connected
+[36m2025-04-02 12:11:14[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 6.113 ms
+[36m2025-04-02 12:11:14[39m [[32mINFO[39m]: OPTIONS /profile 204 4.067 ms
+[36m2025-04-02 12:11:14[39m [[32mINFO[39m]: OPTIONS /profile 204 0.223 ms
+[36m2025-04-02 12:11:14[39m [[31mERROR[39m]: GET /profile 401 2.851 ms
+[36m2025-04-02 12:11:14[39m [[31mERROR[39m]: GET /profile 401 0.795 ms
+[36m2025-04-02 12:11:15[39m [[32mINFO[39m]: OPTIONS /profile 204 1.968 ms
+[36m2025-04-02 12:11:15[39m [[31mERROR[39m]: GET /profile 401 0.458 ms
+[36m2025-04-02 12:11:17[39m [[32mINFO[39m]: OPTIONS /profile 204 0.209 ms
+[36m2025-04-02 12:11:17[39m [[31mERROR[39m]: GET /profile 401 3.260 ms
+[36m2025-04-02 12:11:29[39m [[32mINFO[39m]: OPTIONS /login 204 0.229 ms
+[36m2025-04-02 13:10:48[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 9.407 ms
+[36m2025-04-02 13:10:49[39m [[32mINFO[39m]: OPTIONS /profile 204 0.174 ms
+[36m2025-04-02 13:10:49[39m [[32mINFO[39m]: OPTIONS /profile 204 0.212 ms
+[36m2025-04-02 13:10:49[39m [[31mERROR[39m]: GET /profile 401 23.344 ms
+[36m2025-04-02 13:10:49[39m [[31mERROR[39m]: GET /profile 401 0.403 ms
+[36m2025-04-02 13:11:14[39m [[32mINFO[39m]: OPTIONS /profile 204 0.208 ms
+[36m2025-04-02 13:11:14[39m [[31mERROR[39m]: GET /profile 401 0.484 ms
+[36m2025-04-02 13:11:14[39m [[32mINFO[39m]: OPTIONS /refresh-token 204 0.270 ms
+[36m2025-04-02 13:11:14[39m [[32mINFO[39m]: OPTIONS /profile 204 0.197 ms
+[36m2025-04-02 13:11:14[39m [[31mERROR[39m]: GET /profile 401 0.573 ms
+[36m2025-04-02 13:18:37[39m [[32mINFO[39m]: Database Connected
