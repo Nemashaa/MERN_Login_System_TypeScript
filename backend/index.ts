@@ -28,6 +28,7 @@ mongoose
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
+app.options('*', cors(corsOptions)); // Handle preflight requests
 app.use(cors(corsOptions)); // Use the updated CORS configuration
 
 // Routes
@@ -43,4 +44,4 @@ app.listen(PORT, () => {
 });
 
 
-// This is a test message 
+// This is a test message

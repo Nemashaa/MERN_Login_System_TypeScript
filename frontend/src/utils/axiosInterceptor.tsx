@@ -1,8 +1,8 @@
 import axios from 'axios';
 import useAuthStore from '../store/authStore';
 
-axios.defaults.baseURL = 'https://mern-login-system-typescript.onrender.com';
-axios.defaults.withCredentials = true;
+axios.defaults.baseURL = 'https://mern-login-system-typescript.onrender.com'; // Ensure this URL is correct
+axios.defaults.withCredentials = true; // Ensure cookies are sent with requests
 
 axios.interceptors.response.use(
   (response) => response,
