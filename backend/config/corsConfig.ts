@@ -1,22 +1,20 @@
 import { CorsOptions } from 'cors';
 
+const allowedOrigins = [
+  'https://splendorous-longma-229589.netlify.app', // Remove trailing slash
+  'https://67ed09f497fd2a0062f3a8f7--splendorous-longma-229589.netlify.app',
+  'https://67ed0f9d97fd2a08c8f3a673--splendorous-longma-229589.netlify.app',
+];
+
 const corsOptions: CorsOptions = {
   origin: (origin, callback) => {
-    const allowedOrigins = [
-      'https://splendorous-longma-229589.netlify.app', // Main production URL
-      /\.netlify\.app$/, // Allow all Netlify preview URLs
-    ];
-
-    if (!origin || allowedOrigins.some((allowedOrigin) => origin.match(allowedOrigin))) {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true, // Allow cookies to be sent with requests
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow these HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
+  credentials: true, // Allow cookies
 };
 
 export default corsOptions;
-
