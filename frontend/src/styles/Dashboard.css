@@ -2,12 +2,13 @@
 .dashboard-page {
   padding: 20px;
   text-align: center;
-  background-color: #ffffff;
-  margin-top: 60px;
-  min-height: calc(100vh - 60px); /* Adjust to fit the full screen minus the navbar height */
-  width: 100%; /* Adjust to fit the full screen width */
+  background-color: #ffffff; /* White background */
+  margin: 0; /* Remove any default margin */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  width: 100vw; /* Ensure it covers the full viewport width */
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center content horizontally */
   justify-content: flex-start; /* Align content to the top */
   box-sizing: border-box; /* Include padding and border in width/height calculations */
 }
@@ -32,11 +33,13 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  width: 80%; /* Restrict width to leave space on the sides */
+  max-width: 600px; /* Optional: Set a maximum width */
 }
 
 .task-input {
   padding: 8px;
-  width: 70%;
+  flex: 1; /* Allow the input to take up available space */
   border: 1px solid #ced4da;
   border-radius: 5px;
   font-size: 16px;
@@ -62,11 +65,13 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  width: 80%; /* Restrict width to leave space on the sides */
+  max-width: 600px; /* Optional: Set a maximum width */
 }
 
 .update-task input {
   padding: 8px;
-  width: 70%;
+  flex: 1; /* Allow the input to take up available space */
   border: 1px solid #ced4da;
   border-radius: 5px;
   font-size: 16px;
@@ -103,7 +108,8 @@
 
 /* Table Styling */
 .dashboard-table {
-  width: 100%; /* Adjust table width to fit the parent container */
+  width: 80%; /* Restrict table width to leave space on the sides */
+  max-width: 800px; /* Optional: Set a maximum width */
   border-collapse: collapse;
   margin-top: 20px;
 }
