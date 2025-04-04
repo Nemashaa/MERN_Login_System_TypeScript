@@ -48,14 +48,12 @@ const loginUser = asyncHandler(async (req: Request, res: Response): Promise<void
 
   const user = await User.findOne({ email });
   if (!user) {
-    logger.warn(`Login failed: No user found with email ${email}`);
     res.status(404).json({ error: 'No user found' });
     return;
   }
 
   const match = await comparePassword(password, user.password);
   if (!match) {
-    logger.warn(`Login failed: Incorrect password for email ${email}`);
     res.status(400).json({ error: 'Incorrect password' });
     return;
   }
@@ -65,18 +63,17 @@ const loginUser = asyncHandler(async (req: Request, res: Response): Promise<void
 
   res.cookie('refreshToken', refreshToken, {
     httpOnly: true,
-    secure: true,
+    secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
   });
 
   res.cookie('accessToken', accessToken, {
     httpOnly: true,
-    secure: true,
+    secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
   });
 
-  logger.info(`User logged in: ${email}`);
-  res.json({ accessToken, user });
+  res.json({ user });
 });
 
 // Refresh Token Endpoint
@@ -103,11 +100,10 @@ const refreshAccessToken = asyncHandler(async (req: Request, res: Response): Pro
 });
 
 // Logout Endpoint
-const logoutUser = asyncHandler(async (req: AuthenticatedRequest, res: Response): Promise<void> => {
-  res.cookie('refreshToken', '', { httpOnly: true, secure: true, sameSite: 'strict', maxAge: 0 });
-  res.cookie('accessToken', '', { httpOnly: true, secure: true, sameSite: 'strict', maxAge: 0 });
+const logoutUser = asyncHandler(async (req: Request, res: Response): Promise<void> => {
+  res.clearCookie('refreshToken', { httpOnly: true, sameSite: 'strict' });
+  res.clearCookie('accessToken', { httpOnly: true, sameSite: 'strict' });
 
-  logger.info(`User logged out: ${req.user?._id || 'Unknown user'}`);
   res.json({ success: true, message: 'Logged out successfully' });
 });
 

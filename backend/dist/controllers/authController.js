@@ -54,13 +54,11 @@ const loginUser = (0, express_async_handler_1.default)((req, res) => __awaiter(v
     const { email, password } = req.body;
     const user = yield user_1.default.findOne({ email });
     if (!user) {
-        logger_1.default.warn(`Login failed: No user found with email ${email}`);
         res.status(404).json({ error: 'No user found' });
         return;
     }
     const match = yield (0, auth_1.comparePassword)(password, user.password);
     if (!match) {
-        logger_1.default.warn(`Login failed: Incorrect password for email ${email}`);
         res.status(400).json({ error: 'Incorrect password' });
         return;
     }
@@ -68,16 +66,15 @@ const loginUser = (0, express_async_handler_1.default)((req, res) => __awaiter(v
     const refreshToken = (0, auth_1.generateRefreshToken)(user);
     res.cookie('refreshToken', refreshToken, {
         httpOnly: true,
-        secure: true,
+        secure: process.env.NODE_ENV === 'production',
         sameSite: 'strict',
     });
     res.cookie('accessToken', accessToken, {
         httpOnly: true,
-        secure: true,
+        secure: process.env.NODE_ENV === 'production',
         sameSite: 'strict',
     });
-    logger_1.default.info(`User logged in: ${email}`);
-    res.json({ accessToken, user });
+    res.json({ user });
 }));
 exports.loginUser = loginUser;
 // Refresh Token Endpoint
@@ -99,10 +96,8 @@ const refreshAccessToken = (0, express_async_handler_1.default)((req, res) => __
 exports.refreshAccessToken = refreshAccessToken;
 // Logout Endpoint
 const logoutUser = (0, express_async_handler_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
-    res.cookie('refreshToken', '', { httpOnly: true, secure: true, sameSite: 'strict', maxAge: 0 });
-    res.cookie('accessToken', '', { httpOnly: true, secure: true, sameSite: 'strict', maxAge: 0 });
-    logger_1.default.info(`User logged out: ${((_a = req.user) === null || _a === void 0 ? void 0 : _a._id) || 'Unknown user'}`);
+    res.clearCookie('refreshToken', { httpOnly: true, sameSite: 'strict' });
+    res.clearCookie('accessToken', { httpOnly: true, sameSite: 'strict' });
     res.json({ success: true, message: 'Logged out successfully' });
 }));
 exports.logoutUser = logoutUser;

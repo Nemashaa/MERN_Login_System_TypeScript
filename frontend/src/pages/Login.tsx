@@ -1,5 +1,5 @@
 // components/Login.tsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
@@ -15,7 +15,14 @@ export default function Login() {
     password: '',
   });
 
-  const { setUser } = useAuthStore();
+  const { isLoggedIn, setUser } = useAuthStore();
+
+  // Prevent redirection loop by checking isLoggedIn
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate('/dashboard', { replace: true }); // Use replace to prevent history stack buildup
+    }
+  }, [isLoggedIn, navigate]);
 
   const loginUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -1,8 +1,16 @@
 import axios from 'axios';
 import useAuthStore from '../store/authStore';
 
-axios.defaults.baseURL = 'https://mern-login-system-typescript.onrender.com'; // Ensure this URL is correct
+axios.defaults.baseURL = 'http://localhost:8001'; // Backend URL
 axios.defaults.withCredentials = true; // Ensure cookies are sent with requests
+
+axios.interceptors.request.use(
+  (config) => {
+    // Cookies will be sent automatically; no need to manually set Authorization header
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
 
 axios.interceptors.response.use(
   (response) => response,
@@ -12,14 +20,18 @@ axios.interceptors.response.use(
     if (error.response?.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
       try {
-        const { data } = await axios.post<{ accessToken: string }>('/refresh-token', {}, { withCredentials: true });
-        if (data.accessToken) {
-          axios.defaults.headers.common['Authorization'] = `Bearer ${data.accessToken}`;
-          return axios(originalRequest);
-        }
+        await axios.post('/refresh-token', {}, { withCredentials: true }); // Refresh token via cookies
+        return axios(originalRequest); // Retry the original request
       } catch (err) {
         console.error('Failed to refresh token:', err);
-        useAuthStore.getState().logout(); // Log out the user if token refresh fails
+        const { logout } = useAuthStore.getState();
+        logout(); // Log out the user if token refresh fails
+
+        // Redirect to login only if the user is not on a public page
+        const publicPages = ['/login', '/register', '/'];
+        if (!publicPages.includes(window.location.pathname)) {
+          window.location.href = '/login';
+        }
       }
     }
     return Promise.reject(error);

@@ -27,8 +27,10 @@ mongoose
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.urlencoded({ extended: false }));
 app.use(cors(corsOptions)); // Use the updated CORS configuration
+
+// Handle preflight requests
+app.options('*', cors(corsOptions));
 
 // Routes
 app.use('/', authRoutes);
@@ -41,6 +43,3 @@ const PORT = process.env.PORT || 8001; // Backend is running on port 8001
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-
-// This is a test message 

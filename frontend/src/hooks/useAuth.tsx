@@ -68,16 +68,3 @@ export const useRegister = () => {
     },
   });
 };
-
-export const useLogout = () => {
-  const { setUser } = useAuthStore();
-
-  return useMutation<void, Error>({
-    mutationFn: async (): Promise<void> => {
-      await axios.post('/logout');
-    },
-    onSuccess: () => {
-      setUser(null);
-    },
-  });
-};

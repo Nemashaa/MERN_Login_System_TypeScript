@@ -1,24 +1,23 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import useAuthStore from "../store/authStore";
-import { useLogout } from "../hooks/useAuth";
+import useAuthStore from "../store/authStore"; // Use logout from authStore
 import "../styles/Navbar.css";
 
 export default function Navbar() {
-  const { isLoggedIn, checkAuth, setUser, setIsLoggedIn } = useAuthStore(); // Ensure setIsLoggedIn is included
+  const { isLoggedIn, checkAuth, logout } = useAuthStore(); // Access logout from authStore
   const navigate = useNavigate();
-
-  const logoutMutation = useLogout();
 
   useEffect(() => {
     checkAuth(); // Check authentication on mount
   }, [checkAuth]);
 
   const handleLogout = async () => {
-    await logoutMutation.mutateAsync();
-    setUser(null); 
-    setIsLoggedIn(false); // Explicitly update `isLoggedIn`
-    navigate("/login");
+    try {
+      await logout(); // Await the logout function from authStore
+      navigate("/login"); // Navigate to the login page after logout
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
   };
 
   return (

@@ -8,20 +8,23 @@ import useAuthStore from "./store/authStore";
 const queryClient = new QueryClient();
 
 const App: React.FC = () => {
-  const { checkAuth, refreshAccessToken } = useAuthStore();
+  const { checkAuth } = useAuthStore();
 
   useEffect(() => {
     const initializeAuth = async () => {
-      await refreshAccessToken();
-      await checkAuth();
+      try {
+        await checkAuth(); // Validate the user's authentication state
+      } catch (error) {
+        console.error("Error during authentication initialization:", error);
+      }
     };
     initializeAuth();
-  }, [checkAuth, refreshAccessToken]);
+  }, [checkAuth]);
 
   return (
     <QueryClientProvider client={queryClient}>
       <Toaster position="bottom-right" toastOptions={{ duration: 2000 }} />
-      <AppRoutes /> {/* Navbar is removed here to prevent duplication */}
+      <AppRoutes />
     </QueryClientProvider>
   );
 };

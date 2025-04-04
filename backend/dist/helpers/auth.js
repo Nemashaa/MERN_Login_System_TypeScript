@@ -33,8 +33,7 @@ const generateAccessToken = (user) => {
             ? process.env.ACCESS_TOKEN_EXPIRY
             : '60s',
     };
-    return jsonwebtoken_1.default.sign({ _id: String(user._id), email: user.email, name: user.name }, // Ensure `_id` is a string
-    process.env.JWT_SECRET, options);
+    return jsonwebtoken_1.default.sign({ _id: String(user._id), email: user.email, name: user.name }, process.env.JWT_SECRET, options);
 };
 exports.generateAccessToken = generateAccessToken;
 // Function to generate refresh token

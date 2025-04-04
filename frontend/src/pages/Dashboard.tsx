@@ -2,21 +2,20 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import useAuthStore from "../store/authStore";
-import { useUserPosts, useAddPost, useUpdatePost, useDeletePost } from '../hooks/usePosts'; // Correct hook
+import { useUserPosts, useAddPost, useUpdatePost, useDeletePost } from '../hooks/usePosts';
 import '../styles/Dashboard.css';
 
 export default function Dashboard() {
   const { user } = useAuthStore();
-  const { data: posts, isLoading, isError } = useUserPosts(); // Correct hook for fetching posts
+  const { data: posts, isLoading, isError } = useUserPosts();
   const addPostMutation = useAddPost();
   const updatePostMutation = useUpdatePost();
   const deletePostMutation = useDeletePost();
   const navigate = useNavigate();
 
   const [postInput, setPostInput] = useState({ title: '', description: '' });
-  const [editPostID, setEditPostID] = useState<number | null>(null); // Track the post being edited
+  const [editPostID, setEditPostID] = useState<number | null>(null);
 
-  // Redirect to login if user is null
   useEffect(() => {
     if (!user) {
       navigate('/login');
@@ -25,22 +24,20 @@ export default function Dashboard() {
 
   const handleAddOrUpdatePost = () => {
     if (editPostID) {
-      // Update post
       updatePostMutation.mutate({
         postID: editPostID,
         updatedData: { title: postInput.title, description: postInput.description },
       });
-      setEditPostID(null); // Reset edit state
+      setEditPostID(null);
     } else {
-      // Add new post
       addPostMutation.mutate(postInput);
     }
-    setPostInput({ title: '', description: '' }); // Clear input fields
+    setPostInput({ title: '', description: '' });
   };
 
   const handleEditPost = (postID: number, title: string, description: string) => {
-    setEditPostID(postID); // Set the post ID being edited
-    setPostInput({ title, description }); // Populate input fields with current post values
+    setEditPostID(postID);
+    setPostInput({ title, description });
   };
 
   const handleDeletePost = (postID: number) => {
@@ -61,7 +58,6 @@ export default function Dashboard() {
         <h1>Dashboard</h1>
         {user && <h2>Hi {user.name}!</h2>}
 
-        {/* Input Fields for Adding/Updating Posts */}
         <div className="add-task">
           <input
             className="task-input"
@@ -82,7 +78,6 @@ export default function Dashboard() {
           </button>
         </div>
 
-        {/* Posts Table */}
         <table className="dashboard-table">
           <thead>
             <tr>

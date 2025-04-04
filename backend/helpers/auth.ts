@@ -22,7 +22,7 @@ const generateAccessToken = (user: IUser): string => {
   };
 
   return jwt.sign(
-    { _id: String(user._id), email: user.email, name: user.name },  // Ensure `_id` is a string
+    { _id: String(user._id), email: user.email, name: user.name },  
     process.env.JWT_SECRET as string,
     options
   );
