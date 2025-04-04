@@ -1,7 +1,6 @@
 import axios from 'axios';
 import useAuthStore from '../store/authStore';
 
-//axios.defaults.baseURL = 'http://localhost:8001'; // Backend URL
 axios.defaults.baseURL = 'https://mern-login-system-typescript.onrender.com';
 axios.defaults.withCredentials = true; // Ensure cookies are sent with requests
 
@@ -21,7 +20,7 @@ axios.interceptors.response.use(
     if (error.response?.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
       try {
-        await axios.post('/refresh-token', {}, { withCredentials: true }); // Refresh token via cookies
+        await axios.post('/refresh-token', {}, { withCredentials: true }); // Ensure cookies are sent
         return axios(originalRequest); // Retry the original request
       } catch (err) {
         console.error('Failed to refresh token:', err);
