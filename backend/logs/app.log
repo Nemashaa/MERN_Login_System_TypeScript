@@ -9214,3 +9214,4 @@
 [36m2025-04-04 11:31:50[39m [[32mINFO[39m]: GET /api/posts 304 562.467 ms
 [36m2025-04-04 11:31:53[39m [[32mINFO[39m]: GET /api/posts 304 329.409 ms
 [36m2025-04-04 11:32:40[39m [[32mINFO[39m]: GET /api/posts 304 587.852 ms
+[36m2025-04-04 13:41:04[39m [[32mINFO[39m]: Database Connected
