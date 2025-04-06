@@ -34,7 +34,7 @@ export const updatePost = asyncHandler(async (req: AuthenticatedRequest, res: Re
   const { title, description } = req.body;
 
   const post = await Post.findOneAndUpdate(
-    { postID, user: req.user?._id }, // Use the extended `user` property
+    { _id: postID, user: req.user?._id }, // Ensure the post belongs to the logged-in user
     { title, description },
     { new: true }
   );

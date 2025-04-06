@@ -1,1 +1,0 @@
-// The file has been removed as it only contained the `logout` function.

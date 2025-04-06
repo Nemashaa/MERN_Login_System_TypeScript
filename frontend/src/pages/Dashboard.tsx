@@ -6,7 +6,7 @@ import { useUserPosts, useAddPost, useUpdatePost, useDeletePost } from '../hooks
 import '../styles/Dashboard.css';
 
 export default function Dashboard() {
-  const { user } = useAuthStore();
+  const { user, checkAuth, loading } = useAuthStore(); // Access loading state
   const { data: posts, isLoading, isError } = useUserPosts();
   const addPostMutation = useAddPost();
   const updatePostMutation = useUpdatePost();
@@ -17,10 +17,15 @@ export default function Dashboard() {
   const [editPostID, setEditPostID] = useState<number | null>(null);
 
   useEffect(() => {
-    if (!user) {
-      navigate('/login');
+    checkAuth(); // Verify authentication status on page load
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (!loading && !user) {
+      navigate('/login'); // Redirect to login only after the check is complete
     }
-  }, [user, navigate]);
+  }, [user, loading, navigate]);
 
   const handleAddOrUpdatePost = () => {
     if (editPostID) {
@@ -35,14 +40,18 @@ export default function Dashboard() {
     setPostInput({ title: '', description: '' });
   };
 
-  const handleEditPost = (postID: number, title: string, description: string) => {
-    setEditPostID(postID);
-    setPostInput({ title, description });
+  const handleDeletePost = (postID: number) => {
+    deletePostMutation.mutate(postID); // Use deletePostMutation to delete the post
   };
 
-  const handleDeletePost = (postID: number) => {
-    deletePostMutation.mutate(postID);
+  const handleEditPost = (postID: number, title: string, description: string) => {
+    setEditPostID(postID); // Set the ID of the post being edited
+    setPostInput({ title, description }); // Populate the form with the post's data
   };
+
+  if (loading) {
+    return <MainLayout><div>Loading...</div></MainLayout>; // Show loading spinner while checking auth
+  }
 
   if (isLoading) {
     return <MainLayout><div>Loading...</div></MainLayout>;
@@ -94,13 +103,13 @@ export default function Dashboard() {
                 <td>
                   <button
                     className="update-btn"
-                    onClick={() => handleEditPost(post.postID, post.title, post.description)}
+                    onClick={() => handleEditPost(post.postID, post.title, post.description)} // Call handleEditPost here
                   >
                     Edit
                   </button>
                   <button
                     className="delete-btn"
-                    onClick={() => handleDeletePost(post.postID)}
+                    onClick={() => handleDeletePost(post.postID)} // Call handleDeletePost here
                   >
                     Delete
                   </button>

@@ -8,8 +8,9 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    checkAuth(); // Check authentication on mount
-  }, [checkAuth]);
+    checkAuth(); // Verify authentication status on component mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleLogout = async () => {
     try {

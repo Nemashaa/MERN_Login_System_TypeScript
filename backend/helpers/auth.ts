@@ -16,13 +16,11 @@ const comparePassword = async (password: string, hashed: string): Promise<boolea
 // Function to generate access token
 const generateAccessToken = (user: IUser): string => {
   const options: SignOptions = {
-    expiresIn: typeof process.env.ACCESS_TOKEN_EXPIRY === 'string' 
-      ? (process.env.ACCESS_TOKEN_EXPIRY as SignOptions['expiresIn'])
-      : '60s',
+    expiresIn: (process.env.ACCESS_TOKEN_EXPIRY as SignOptions['expiresIn']) || '180s',
   };
 
   return jwt.sign(
-    { _id: String(user._id), email: user.email, name: user.name },  
+    { _id: String(user._id), email: user.email, name: user.name },
     process.env.JWT_SECRET as string,
     options
   );
@@ -31,13 +29,11 @@ const generateAccessToken = (user: IUser): string => {
 // Function to generate refresh token
 const generateRefreshToken = (user: IUser): string => {
   const options: SignOptions = {
-    expiresIn: typeof process.env.REFRESH_TOKEN_EXPIRY === 'string'
-      ? (process.env.REFRESH_TOKEN_EXPIRY as SignOptions['expiresIn'])
-      : '160m',
+    expiresIn: (process.env.REFRESH_TOKEN_EXPIRY as SignOptions['expiresIn']) || '7d',
   };
 
   return jwt.sign(
-    { _id: String(user._id) },  // Ensure `_id` is a string
+    { _id: String(user._id) },
     process.env.JWT_REFRESH_SECRET as string,
     options
   );
