@@ -84,19 +84,29 @@ const refreshAccessToken = asyncHandler(async (req: Request, res: Response): Pro
     return;
   }
 
-  jwt.verify(
-    refreshToken,
-    process.env.JWT_REFRESH_SECRET as string,
-    (err: VerifyErrors | null, decoded: string | JwtPayload | undefined) => {
-      if (err || !decoded || typeof decoded === 'string') {
-        res.status(403).json({ error: 'Invalid refresh token' }); // Return 403 if the token is invalid
-        return;
-      }
+  try {
+    // Use the synchronous version of jwt.verify
+    const decoded = jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET as string) as JwtPayload;
 
-      const newAccessToken = generateAccessToken(decoded as IUser); // Generate a new access token
-      res.json({ accessToken: newAccessToken }); // Send the new access token to the client
+    // Find the user associated with the token
+    const user = await User.findById(decoded._id);
+    if (!user) {
+      res.status(403).json({ error: 'User not found' });
+      return;
     }
-  );
+
+    // Generate a new access token
+    const newAccessToken = generateAccessToken(user as IUser);
+
+    // Return the new access token
+    res.json({ accessToken: newAccessToken });
+  } catch (err) {
+    if (err instanceof jwt.TokenExpiredError) {
+      res.status(403).json({ error: 'Refresh token expired' });
+    } else {
+      res.status(403).json({ error: 'Invalid refresh token' });
+    }
+  }
 });
 
 // Logout Endpoint

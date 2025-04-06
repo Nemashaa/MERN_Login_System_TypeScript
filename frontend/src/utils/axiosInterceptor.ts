@@ -22,8 +22,11 @@ axios.interceptors.response.use(
     if (error.response?.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
       try {
-        await axios.post('/refresh-token', {}, { withCredentials: true }); // Ensure cookies are sent
-        return axios(originalRequest); // Retry the original request
+        const { data } = await axios.post('/refresh-token', {}, { withCredentials: true }); // Ensure cookies are sent
+        if (data.accessToken) {
+          axios.defaults.headers['Authorization'] = `Bearer ${data.accessToken}`;
+          return axios(originalRequest); // Retry the original request
+        }
       } catch (err) {
         console.error('Failed to refresh token:', err);
         const { logout } = useAuthStore.getState();

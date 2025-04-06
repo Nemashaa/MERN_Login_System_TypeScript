@@ -29,7 +29,7 @@ const generateAccessToken = (user: IUser): string => {
 // Function to generate refresh token
 const generateRefreshToken = (user: IUser): string => {
   const options: SignOptions = {
-    expiresIn: (process.env.REFRESH_TOKEN_EXPIRY as SignOptions['expiresIn']) || '7d',
+    expiresIn: (process.env.REFRESH_TOKEN_EXPIRY as SignOptions['expiresIn']) || '7d', // Use 7 days as default
   };
 
   return jwt.sign(
